@@ -64,7 +64,7 @@ type
   verbs   = (
     go, hail, take, drop, look, flush, open, inflate, play,
     press, enter, eat, drink, buy, climb, water, fill, pour,
-    listen, close, jump,
+    listen, __close, jump,
     marry, fuck, wear, answer, call, break, cut, dance,
     kill, pay, smoke, show, smell, help, kiss, stab, say, quit,
     show_score, save, restore, _no_verb );
@@ -512,4 +512,5 @@ type gamepos = record
         password             : str10;
         _noun                : objects;    {loop variable}
         anything_carried     : boolean;
-
+
+

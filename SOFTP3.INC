@@ -94,15 +94,15 @@ begin
 end;
 
 
-procedure I_see_something( object : objects; messg : str25 );
+procedure I_see_something( _object : objects; messg : str25 );
 (*=========================================================*)
 begin
   with game_position do
     begin
-      if object_place[object]=nowhere then
+      if object_place[_object]=nowhere then
         begin
           write_message('I see something!!!');
-          object_place[object] := your_place;
+          object_place[_object] := your_place;
         end
       else if messg='' then
         I_see_nothing_special
@@ -369,26 +369,26 @@ end;  { take_inventory }
 
 
 
-procedure replace( object, replacement : str10; target : str120 );
+procedure replace( _object, replacement : str10; target : str120 );
 (*==============================================================*)
 var i : integer;
 begin
-  if object<>replacement then
+  if _object<>replacement then
     repeat
-      i := pos( object, target );
+      i := pos( _object, target );
       if i>0 then
         begin
-          delete( target, i, length(object) );
+          delete( target, i, length(_object) );
           insert( replacement, target, i );
         end;
     until i=0;
 end;  { replace }
 
 
-procedure replace_with_space( object : str10; target : str120 );
+procedure replace_with_space( _object : str10; target : str120 );
 (*============================================================*)
 begin
-  replace( object, ' ', target );
+  replace( _object, ' ', target );
 end;  { replace_with_space }
 
 

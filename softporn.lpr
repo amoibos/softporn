@@ -1,0 +1,5 @@
+program softporn;
+
+begin
+end.
+

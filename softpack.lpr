@@ -1,0 +1,5 @@
+program softpack;
+
+begin
+end.
+

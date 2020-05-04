@@ -20,7 +20,7 @@ procedure read_key ( var ch : char; cset : set_of_char );
 var ch_up : char;
 begin
   repeat
-    read( kbd, ch );
+    ch := readkey;
     ch_up := upcase(ch);
     if ch_up in cset then
       writeln( ch )
@@ -80,7 +80,7 @@ var c : char;
 begin
   write('                    Press  <SPACE>  to continue  ');
   repeat
-    read(kbd,c);
+    c := readkey;
     if c<>' ' then write(#7);
   until c=' ';
 end;

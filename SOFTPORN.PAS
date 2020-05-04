@@ -1,5 +1,5 @@
 program softporn_adventure;
-
+uses crt;
 const  bottom_line = 25;    { 24 for CP/M, 25 for IBM PC }
 
 label  quit_game;
